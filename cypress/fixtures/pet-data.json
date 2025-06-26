@@ -1,0 +1,51 @@
+{
+  "validPet": {
+    "id": 12345,
+    "category": {
+      "id": 1,
+      "name": "Dogs"
+    },
+    "name": "Buddy",
+    "photoUrls": [
+      "https://example.com/buddy.jpg"
+    ],
+    "tags": [
+      {
+        "id": 1,
+        "name": "friendly"
+      },
+      {
+        "id": 2,
+        "name": "loyal"
+      }
+    ],
+    "status": "available"
+  },
+  "updatedPet": {
+    "id": 12345,
+    "category": {
+      "id": 1,
+      "name": "Dogs"
+    },
+    "name": "Buddy Updated",
+    "photoUrls": [
+      "https://example.com/buddy-updated.jpg"
+    ],
+    "tags": [
+      {
+        "id": 1,
+        "name": "friendly"
+      },
+      {
+        "id": 2,
+        "name": "loyal"
+      },
+      {
+        "id": 3,
+        "name": "trained"
+      }
+    ],
+    "status": "sold"
+  },
+  "invalidPetId": 999999
+} 

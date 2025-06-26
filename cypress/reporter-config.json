@@ -1,0 +1,15 @@
+{
+  "reporterEnabled": "mochawesome",
+  "mochawesomeReporterOptions": {
+    "reportDir": "cypress/results",
+    "overwrite": false,
+    "html": false,
+    "json": true,
+    "timestamp": "yyyy-mm-dd_HH-MM-ss",
+    "reportTitle": "Cypress Test Report",
+    "reportPageTitle": "Cypress Test Results",
+    "embeddedScreenshots": true,
+    "inlineAssets": true,
+    "saveAllAttempts": false
+  }
+} 

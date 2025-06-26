@@ -1,0 +1,43 @@
+{
+  "name": "cypress-bdd-framework",
+  "version": "1.0.0",
+  "description": "Cypress Test Automation Framework with Cucumber BDD and Page Object Model",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "test:ui": "cypress run --spec 'cypress/e2e/ui/**/*.feature'",
+    "test:api": "cypress run --spec 'cypress/e2e/api/**/*.feature'",
+    "test:all": "cypress run",
+    "report:merge": "mochawesome-merge cypress/results/*.json > cypress/results/output.json",
+    "report:generate": "marge cypress/results/output.json --reportDir cypress/reports --inline",
+    "report:clean": "rm -rf cypress/results/*.json cypress/reports/*.html",
+    "posttest": "npm run report:merge && npm run report:generate"
+  },
+  "keywords": [
+    "cypress",
+    "cucumber",
+    "bdd",
+    "test-automation",
+    "page-object-model"
+  ],
+  "author": "Test Automation Engineer",
+  "license": "MIT",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^22.2.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.5",
+    "cypress": "^12.17.4",
+    "cypress-multi-reporters": "^1.6.2",
+    "esbuild": "^0.19.0",
+    "mocha": "^10.2.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.2.2",
+    "mochawesome-report-generator": "^6.2.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "stepDefinitions": [
+      "cypress/e2e/ui/step-definitions/**/*.js",
+      "cypress/e2e/api/step-definitions/**/*.js"
+    ]
+  }
+}
